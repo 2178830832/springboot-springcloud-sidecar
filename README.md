@@ -1,2 +1,5 @@
 # springboot-springcloud-sidecar
-A project integrating springboot, springcloud with flask.
+This project integrates Springboot, Springcloud, Sidecar and Flask.
+
+# Reference
+<https://blog.csdn.net/pierre_/article/details/105587621>
