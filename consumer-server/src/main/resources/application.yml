@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: consumer-server
+  cloud:
+    client:
+      ipAddress: localhost
+
+server:
+  port: 7902
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://${registry.host}:${registry.port}/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${server.port}
+    status-page-url: http://${spring.cloud.client.ipAddress}:${server.port}/
+
+registry:
+  host: localhost
+  port: 7900
+
